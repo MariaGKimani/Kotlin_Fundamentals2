@@ -11,6 +11,10 @@ fun main(){
     random()
 //    greeting()
     nums()
+    birthYear()
+    implicit()
+    explicit()
+
 }
 //create an immutable variable and print it to the console
 //outcome should be My cat's name is "Fluffy"
@@ -116,5 +120,17 @@ fun nums(){
 fun birthYear(){
     println("Enter birthYear:")
     val userBirth = readLine()?:""
-    val age  = 2023 - userBirth
-    println("Your age  is ${userBirth.toInt() - }")
+    val year = userBirth.toInt()
+    val age  = 2023 - year
+    println("Your age  is ${age}")
+}
+fun implicit(){
+    val cats =3
+    println(cats::class.java)
+    val price = 14.99
+    println(price::class.java)
+}
+fun explicit(){
+    val dogs: Byte =5
+    println(dogs::class.java)
+}
