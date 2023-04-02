@@ -14,6 +14,8 @@ fun main(){
     birthYear()
     implicit()
     explicit()
+    input()
+    number()
 
 }
 //create an immutable variable and print it to the console
@@ -114,6 +116,32 @@ fun nums(){
     val userAge = readLine()?:""
     println("Multiplied by 5 is ${userAge.toInt() * 5}")
 }
+
+
+//Ask the user for a number,and read the input
+fun number(){
+    println("Enter a number:")
+    val randomNum = readLine()?:""
+    val randomNum1 =randomNum.toString()
+    println("your n.o is ${randomNum}")
+    println(randomNum1:: class.java)
+}
+//Ask the user to input a number of type double
+//Multiply it by pi
+//print the type of the resulting variable
+//print result
+var pi = 4.14159
+fun input(){
+    println("enter a Double")
+    var c = readLine()?:""
+    var num1 =c.toDouble()
+    val pi = 3.1415
+    var result = num1* pi
+    println("your n.o is $result")
+
+}
+
+
 //Create a program that asks a user's birth year.
 //Then prints out the user's estimated age
 //(currentYear -birthYear)
@@ -133,4 +161,21 @@ fun implicit(){
 fun explicit(){
     val dogs: Byte =5
     println(dogs::class.java)
+}
+fun transform(){
+    val cats = 3
+    val longCats = cats.toLong()
+    println(cats::class.java)
+    println(longCats::class.java)
+
+}
+fun conversion(){
+    val cats = 3
+    val catsString = cats.toString()
+    println(catsString::class.java)
+    val pi =3.1415
+    println(pi::class.java)
+    val piString = pi.toString()
+    println(piString::class.java)
+
 }
